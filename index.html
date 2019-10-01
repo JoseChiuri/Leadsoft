@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,12 +9,12 @@
    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-   <link rel="manifest" href="site.webmanifest">
   
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/font-awesome.css" rel="stylesheet">
-  <link href="css/owl.carousel.css" rel="stylesheet">
-  <link rel="stylesheet" href="rs-plugin/css/settings.css">
+  
+   <link href="css/bootstrap.min.css" rel="stylesheet">
+   <link href="css/font-awesome.css" rel="stylesheet">
+   <link href="css/owl.carousel.css" rel="stylesheet">
+   <link rel="stylesheet" href="rs-plugin/css/settings.css">
   <link rel="stylesheet" href="css/styles.css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700" rel="stylesheet">
@@ -26,8 +25,41 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <!-- IE6-8 support of HTML5 elements --> <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+  <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      var $container = $('.portfolio-service');
+      $container.isotope({
+          filter: ".kitchen",
+          animationOptions: {
+              duration: 750,
+              easing: 'linear',
+              queue: false
+          }
+      });
+
+      $('.nav-pills li a').click(function() {
+          $('.nav-pills .active').removeClass('active');
+          $(this).addClass('active');
+
+          var selector = $(this).attr('data-filter');
+          $container.isotope({
+              filter: selector,
+              animationOptions: {
+                  duration: 750,
+                  easing: 'linear',
+                  queue: false
+              }
+          });
+          return false;
+      });
+  });
+</script>
 </head>
 <body>
   <!-- Header start -->
@@ -37,15 +69,38 @@
     </div>
     <div class="overlay"></div>
     <div class="container">
-        <nav>
+        <nav id="nav">
             <h1 class="leadsoft"><a href="index.html">lea<span>ds</span>oft</a></h1>
-            <ul>
+            <ul id="navigation">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
+                <li><a href="technologies.html">Technologies</a></li>
+                <li><a href="#">Services &raquo;</a>
+                  <ul>
+                    <li><a href="#">Consultation</a></li>  
+                    <li><a href="#">Logo Design</a></li> 
+                    <li><a href="#">Identity </a></li>
+                     
+                  </ul> 
+          </li>
                 <li><a href="products.html">Products</a></li>
                 <li><a href="contacts.html">Contact</a></li>
-              </ul>
+                    <!-- <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Products <span class="ion-ios-arrow-down"></span></a>
+                        <ul class="dropdown-menu">
+                          <li><a href="#">Fleet Management System</a></li>
+                          <li><a href="#">Learning Management System</a></li>
+                          <li><a href="#">HR Management System</a></li>
+                          <li><a href="#">Hospital Management System </a></li>
+                          <li><a href="#">Procurement and Supplier Management System</a></li>
+                          <li><a href="#">Payroll Management System </a></li>
+                          <li><a href="#">Asset Management System </a></li>
+                          <li><a href="#">CRM- Customer Relationship Management System </a></li>
+                          <li><a href="#">Bulk SMS </a></li>
+                          <li><a href="#">ERP- Enterprise Resource Planning System </a></li>
+                        </ul>
+                      </li> -->
+							</ul>
         </nav>
     </div>
   </header> 
@@ -88,63 +143,71 @@
 
 <!-- Revolution slider end -->
  
-  <!--Footer-->
-<footer class="footer">
-  <div class="container">
-      <div class="row">
-          <div class="col-md-6 col-lg-4">
-              <div class="widget clearfix">
-                  <div class="widget-title">
-                      <!--<img src="images/logos/logo-2.png" alt="" />-->
-                      <h3>About us</h3>
-                  </div>
-                  <p> Lloyd constellations is an I.T company situated at the Chandaria Business Innovation and Incubation Center - Kenyatta University. We offer services ranging from Mobile Apps Development, Web design and development, Software development, Games development, Cyber Security solutions and CCTV Installations.</p>                        
-              </div><!-- end clearfix -->
-          </div><!-- end col -->
-  
-  <div class="col-md-6 col-lg-4">
-              <div class="widget clearfix">
-                  <div class="widget-title">
-                      <h3>Useful links</h3>
-                  </div>
-  
-                  <ul class="footer-links hov">
-                      <li><a href="https://lloydconstellations.com">Home <span class="icon icon-arrow-right2"></span></a></li> 
-        <li><a href="about-us">About <span class="icon icon-arrow-right2"></span></a></li> 
-                      <li><a href="pricing">Pricing <span class="icon icon-arrow-right2"></span></a></li>
-        <li><a href="contact-us">Contact <span class="icon icon-arrow-right2"></span></a></li>
-                  </ul><!-- end links -->
-              </div><!-- end clearfix -->
-          </div><!-- end col -->
-  
-           
-  <div class="col-md-6 col-lg-4">
-    <div class="widget footer-contact clearfix">
-      <div class="widget-title">
-                      <h3>Contact Us</h3>
-                  </div>
-      
-      <ul>
-        <li>Address: PO Box 16122 Nairobi, Kenya 
-        <br> Chandaria Bussiness Innovation cenntre - CBIIC-KU</li>
-        <li>Phone: <a href="#">+254 718010642 /+254 796135006</a></li>
-        <li>Email: <a href="#">info@lloydconstellations.com </a></li>
-      </ul>
-      <ul class="social-list">
-        <li><a href="" target="_blank" class="facebook"><i class="fa fa-facebook"></i></a></li>
-        <li><a href="" target="_blank" class="twitter"><i class="fa fa-twitter"></i></a></li> 
-        <li><a href="https://www.instagram.com/lloydconstellations/" target="_blank" class="instagram"><i class="fa fa-instagram"></i></a></li>
-      </ul>
-      
+
+ <!--================Footer Area =================-->
+ <footer class="footer_area">
+  <div class="footer_widgets">
+    <div class="container">
+      <div class="row footer_wd_inner">
+        <div class="col-lg-3 col-6">
+          <aside class="f_widget f_about_widget">
+            <!-- <img src="img/logo/footer_logo.png" alt=""> -->
+            <!-- <style>.pink-footer{color:pink;font-family: 'Fredericka the Great', cursive;font-size: 33px} .blue-footer{color:blue;font-family: 'Fredericka the Great', cursive;font-size: 33px;}</style> -->
+            <!-- <h1><span class="pink-footer">Shani's</span> <span class="blue-footer">Delights</span></h1> -->
+            <p></p>
+
+          </aside>
+        </div>
+        <div class="col-lg-3 col-6">
+          <aside class="f_widget f_link_widget f_about_widget">
+            <div class="f_title">
+              <h3>Social Media</h3>
+            </div>
+            <ul class="nav">
+              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+            </ul>
+          </aside>
+        </div>
+        <div class="col-lg-3 col-6">
+          <aside class="f_widget f_link_widget">
+            <div class="f_title">
+              <h3>Work Times</h3>
+            </div>
+            <ul class="list_style">
+              <li><a href="#">Monday - Friday : 8 am - 8 pm</a></li>
+              <li><a href="#">Saturday : 9am - 4pm</a></li>
+              <li><a href="#">Sunday : Closed</a></li>
+            </ul>
+          </aside>
+        </div>
+        <div class="col-lg-3 col-6">
+          <aside class="f_widget f_contact_widget">
+            <div class="f_title">
+              <h3>Contact Info</h3>
+            </div>
+            <h4>+254-706-382729</h4>
+            <p>Ruiru<br></p>
+            <h5>contact@shanghts.co.ke</h5>
+          </aside>
+        </div>
+      </div>
     </div>
   </div>
-  
-  
-  
-      </div><!-- end row -->
-  </div><!-- end container -->
-  </footer><!-- end footer -->
 
+</footer>
+<!--================End Footer Area =================-->
+
+
+<!--Footer Start-->
+<div class="footer-wrap">
+  <div class="container">
+    <div class="copyright">Copyright © 2019 Leadsoft. All Rights Reserved</div>
+  </div>
+</div>
+<!--Footer end-->
 
 
 <!--page scroll start-->

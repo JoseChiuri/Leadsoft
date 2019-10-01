@@ -1,7 +1,3 @@
-/* @charset "utf-8";
-@import url("https://fonts.googleapis.com/css?family=Lora:400,400i,700|Montserrat:300,400,500,600,700|Open+Sans:300,400,400i,600,600i,700|Playfair+Display:400,400i,700,900|Lato"); */
-
-
 *{
 	margin: 0;
 	padding: 0;
@@ -22,6 +18,13 @@ html{
     text-decoration: none !important;
     outline: none !important;
 } */
+}
+
+    .clearfix::after{
+        content: '';
+        display: block;
+        clear: both;
+    }
 
 a{
 	text-decoration: none;
@@ -44,8 +47,6 @@ a{
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; 
-  margin:150px;
-  opacity:0.7;
 
 }
 
@@ -433,9 +434,7 @@ nav ul li a:hover::after{
   color: #fff;
 }
 
-.tp-leftarrow .tp-arr-allwrapper {
-  content: "\f104";
-}
+.tp-leftarrow .tp-arr-allwrapper {}
 
 .tp-rightarrow .tp-arr-allwrapper {}
 
@@ -451,12 +450,10 @@ nav ul li a:hover::after{
 
 .tp-leftarrow .tp-arr-iwrapper:before {
   content: "\f104";
-  
 }
 
 .tp-rightarrow .tp-arr-iwrapper:before {
   content: "\f105";
- 
 }
 
 .tp-rightarrow .tp-arr-iwrapper {}
@@ -1941,8 +1938,7 @@ color: #00affe;
 
 .banner{
 	position: relative;
-  /* text-align: center; */
-  height:95px;
+	/* text-align: center; */
 }
 
 .banner h2{
@@ -1950,35 +1946,24 @@ color: #00affe;
 	font-size: 30px;
 	font-weight: 700;
 	letter-spacing: 1px;
-	margin-left: 10px;
+	margin-left: 20px;
 	position: relative;
 }
 .banner h2::after {
-    /* background: #201e21; */
+    /*background: #201e21;*/
     content: "";
     height: 22px;
     left: 0px;
 	right: 0px;
 	margin: 0 auto;
-    position: absolute;
+    /* position: absolute;
     top: 8px;
-    width: 30%;
+    width: 30%; */
 }
 
-
-.banner ul {
+.banner h2 span{
 	position: relative;
-	margin-left: 10px;
-  position: relative;
-  
-}
-.banner ul li {
-  list-style: none;
-  letter-spacing: 3px;
- 
-}
-.banner a {
-  text-decoration: none;
+	z-index: 1;
 }
 
 /* Drop-Down Navigation */
@@ -2041,185 +2026,32 @@ ul#navigation ul li a {
     width:150px;
     height:100px;
 }
+/*CONTENT*/
+.content{
+    width: 60%;
+    margin: 0px auto 0px ;
+    /* border: 1px solid red; */
 
-/* Our Mission Area css
-============================================================================================ */
-.our_mission_inner .mission_inner_text h6 {
-  font-size: 20px;
-  line-height: 30px;
-  color: #242424;
-  font-family: "Lora", serif;
-  font-style: italic;
-  margin-bottom: 30px;
+    
+}
+.content .main-content{
+    padding: 30px;
+    width: 50%;
+    float:left;
+    /* border: 1px solid blue; */
+    background: ffff;
+    height: 400px  ;
+    
 }
 
-.our_mission_inner .mission_inner_text p {
-  font-size: 16px;
-  line-height: 26px;
-  color: #797979;
-  font-family: "Open Sans", sans-serif;
-  margin-bottom: 45px;
+
+.content .sidebar{
+  padding: 30px;
+   background: grey;
+    width: 50%;
+    float:left;
+    /* border: 1px solid green; */
+    height: 400px  ;
+
 }
 
-.our_mission_inner .mission_inner_text .nav li {
-  margin-right: 40px;
-}
-
-.our_mission_inner .mission_inner_text .nav li a {
-  font-size: 25px;
-  color: #473c3a;
-  font-family: "Playfair Display", serif;
-  font-style: italic;
-}
-
-.our_mission_inner .mission_inner_text .nav li:last-child {
-  margin-right: 0px;
-}
-
-/* End Our Mission Area css
-============================================================================================ */
-
-/* Footer Area css
-============================================================================================ */
-.footer_area {
-  background: #303339;
-  overflow: hidden;
-}
-
-.footer_widgets {
-  padding: 80px 0px 50px 0px;
-}
-
-.footer_widgets .footer_wd_inner .col-lg-3:nth-child(2) .f_link_widget {
-  padding-left: 35px;
-}
-
-.f_title {
-  margin-bottom: 20px;
-}
-
-.f_title h3 {
-  color: #fff;
-  font-family: "Playfair Display", serif;
-  font-weight: bold;
-  font-size: 20px;
-  position: relative;
-  padding-bottom: 10px;
-  margin-bottom: 0px;
-}
-
-.f_title h3:before {
-  content: "";
-  width: 30px;
-  height: 1px;
-  position: absolute;
-  left: 0px;
-  bottom: 0px;
-  background: #f195b2;
-}
-
-.f_about_widget p {
-  font-size: 14px;
-  line-height: 23px;
-  font-family: "Open Sans", sans-serif;
-  color: #a8a8a8;
-  letter-spacing: .28px;
-  margin-top: 20px;
-  margin-bottom: 0px;
-}
-
-.f_about_widget .nav {
-  margin-top: 35px;
-}
-
-.f_about_widget .nav li {
-  display: inline-block;
-  margin-right: 10px;
-}
-
-.f_about_widget .nav li a {
-  display: inline-block;
-  text-align: center;
-  height: 36px;
-  width: 36px;
-  border-radius: 50%;
-  color: #fff;
-  border: 1px solid #7b7b7c;
-  font-size: 16.92px;
-  line-height: 35px;
-  -webkit-transition: all 400ms linear 0s;
-  -o-transition: all 400ms linear 0s;
-  transition: all 400ms linear 0s;
-}
-
-.f_about_widget .nav li:hover a {
-  color: #f195b2;
-  border-color: #f195b2;
-}
-
-.f_about_widget .nav li:last-child {
-  margin-right: 0px;
-}
-
-.f_link_widget .list_style li {
-  margin-bottom: 10px;
-}
-
-.f_link_widget .list_style li a {
-  font-size: 14px;
-  color: #a8a8a8;
-  letter-spacing: .28px;
-  font-family: "Open Sans", sans-serif;
-  -webkit-transition: all 400ms linear 0s;
-  -o-transition: all 400ms linear 0s;
-  transition: all 400ms linear 0s;
-}
-
-.f_link_widget .list_style li:hover a {
-  color: #f195b2;
-}
-
-.f_contact_widget h4 {
-  font-size: 18px;
-  color: #a8a8a8;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 600;
-  margin-bottom: 15px;
-}
-
-.f_contact_widget p {
-  font-size: 14px;
-  line-height: 26px;
-  color: #a8a8a8;
-  font-family: "Open Sans", sans-serif;
-  margin-bottom: 0px;
-}
-
-.f_contact_widget h5 {
-  font-size: 14px;
-  line-height: 26px;
-  color: #a8a8a8;
-  font-family: "Open Sans", sans-serif;
-  margin-bottom: 0px;
-}
-
-.footer_copyright .copyright_inner {
-  overflow: hidden;
-  border-top: 1px solid #3b3e43;
-  padding: 32px 0px 30px 0px;
-}
-
-.footer_copyright .copyright_inner .float-left h5 {
-  font-size: 14px;
-  color: #767676;
-  font-family: "Open Sans", sans-serif;
-  margin-bottom: 0px;
-}
-
-.footer_copyright .copyright_inner .float-right a {
-  color: #f195b2;
-  font-family: "Open Sans", sans-serif;
-}
-
-/* End Footer Area css
-============================================================================================ */
